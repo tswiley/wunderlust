@@ -46,3 +46,27 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+@import url("https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat");
+
+:root {
+	--Yellow:#F6D64A;
+	--Teal:#55BCD5;
+	--Purple:#0c0c0c;
+	--Blue:#499BD2;
+	--Dark-Gray:#222222;
+	--Light-gray:#EAEAEA;
+	--White:#FFFFFF;
+	--Black:#000000;
+	font-size: 16px;
+	font-family: Molle, Motserrat;
+	box-sizing: border-box;
+}
+
+body {
+
+}
+
+header {
+
+}
