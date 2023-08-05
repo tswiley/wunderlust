@@ -179,6 +179,10 @@ h2 p {
 	padding-bottom: 20px;
 }
 
+#intro {
+	padding-bottom: 20px;
+}
+
 #intro h2 {
 	margin: auto;
 	width: calc(100% - 4rem);
@@ -206,4 +210,242 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+#plan {
+	background-color: #F6D64A;
+}
+
+#plan div {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0px;
+}
+
+
+#plan section {
+	border: 2px solid white;
+    background-color: #55BCD5; 
+    padding: 10px;
+    margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	flex: 1;
+	height: 200px;
+	max-width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#plan section:last-child {
+    margin-bottom: 20px; /* Remove margin from the last child section */
+}
+
+#plan h3 {
+	margin: auto;
+	width: calc(100% - 3rem);
+	font-size: 30px;
+}
+
+#plan h4 {
+    font-size: 20px; 
+    color: black;  
+	font-weight: bold;
+	text-align: center;
+}
+
+#plan a {
+    text-decoration: none;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#plan img {
+    max-width: 100%;
+	height: 150px;
+    margin-bottom: 10px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px; 
+	align-items: center;
+}
+
+#testimonials h3 {
+	margin: auto;
+	width: calc(100% - 3rem);
+	font-size: 30px;
+}
+
+#testimonials div {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	justify-content: center;
+}
+
+#testimonials section {
+	border: 2px solid white;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#testimonials h4 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#testimonials p {
+	text-align: center;
+}
+#testimonials q {
+	text-align: center;
+}
+
+#testimonials img {
+	max-width: 80%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+#about {
+    background-color: #499BD2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#about h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#about section {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#about h4 {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#about p {
+    margin-top: 10px;
+}
+
+#about img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#contact {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#contact h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: grid;
+    gap: 10px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input,
+#contact select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact .custom-select {
+    position: relative;
+}
+
+#contact select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: url("images/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+#contact select::-ms-expand {
+    display: none;
+}
+
+#contact .focus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #55BCD5;
+    transform-origin: bottom left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#contact select:focus + .focus {
+    transform: scaleX(1);
+}
+
+#contact input[type="submit"] {
+    background-color: #55BCD5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #499BD2;
 }
