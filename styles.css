@@ -85,8 +85,8 @@ body {
 }
 
 header {
-	background-color: white;
-	background: linear-gradient(to bottom, teal, white);
+	background-color: var(--White);
+	background: linear-gradient(to bottom, var(--Teal), var(--White));
 	color: black;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -99,7 +99,7 @@ header {
 }
 
 nav {
-    background-color: #F6D64A;
+    background-color: var(--Yellow);
 	height: 40px;
 	width: 200px;
 	display: flex;
@@ -146,13 +146,13 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--Black);
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: darkblue;
+    color: var(--Light-gray);
 }
 
 h1, h2, h3 {
@@ -213,7 +213,7 @@ img {
 }
 
 #plan {
-	background-color: #F6D64A;
+	background-color: var(--Yellow);
 }
 
 #plan div {
@@ -224,8 +224,8 @@ img {
 
 
 #plan section {
-	border: 2px solid white;
-    background-color: #55BCD5; 
+	border: 2px solid var(--White);
+    background-color: var(--Teal); 
     padding: 10px;
     margin-left: 20px;
 	margin-right: 20px;
@@ -252,14 +252,14 @@ img {
 
 #plan h4 {
     font-size: 20px; 
-    color: black;  
+    color: var(--Black);  
 	font-weight: bold;
 	text-align: center;
 }
 
 #plan a {
     text-decoration: none;
-    color: white; 
+    color: var(--White); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,7 +289,7 @@ img {
 }
 
 #testimonials section {
-	border: 2px solid white;
+	border: 2px solid var(--White);
 	padding: 20px;
 	border-radius: 10px;
 }
@@ -300,12 +300,13 @@ img {
 	font-weight: bold;
 }
 
-#testimonials p {
+#testimonials p, q {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	align-items: center;
 	text-align: center;
 }
-#testimonials q {
-	text-align: center;
-}
+
 
 #testimonials img {
 	max-width: 80%;
@@ -316,7 +317,7 @@ img {
 }
 
 #about {
-    background-color: #499BD2;
+    background-color: var(--Blue);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -361,11 +362,11 @@ img {
     height: 100px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 #contact {
-    padding: 20px;
+    padding: 30px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -385,12 +386,60 @@ img {
 	font-size: 16px;
 }
 
+#contact fieldset legend {
+    font-weight: bold;
+}
+
 #contact form {
     display: grid;
     gap: 10px;
     max-width: 100%;
     box-sizing: border-box;
 	align-items: stretch;
+}
+
+#contact label {
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#contact input[type="radio"] {
+    display: none;
+}
+
+#contact .radio-label {
+	font-weight: normal;
+}
+#contact .radio-input {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--Purple); /* Purple border */
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+#contact .radio-input::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Purple); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#contact input[type="radio"]:checked + .radio-input::before {
+    opacity: 1;
 }
 
 #contact label {
@@ -404,21 +453,32 @@ img {
     padding: 10px;
 	margin-left: 5px;
     margin-bottom: 10px;
-    border: 3px solid #9B26B0;
+    border: 3px solid var(--Purple);
+    font-size: 20px;
+}
+
+#contact input::placeholder,
+#contact select::placeholder {
     font-size: 16px;
+    color: var(--Dark-Gray); 
 }
 
 #contact .custom-select {
     position: relative;
 }
 
+#contact .custom-select select::placeholder {
+    font-size: 14px;
+    color: var(--Dark-Gray); 
+}
+
 #contact select {
-    appearance: none;
     background-color: transparent;
     background-image: url("images/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: right 10px center;
 	padding: 10px 25px 10px 10px;
+	width: 100%;
 }
 
 #contact select::-ms-expand {
@@ -426,11 +486,36 @@ img {
 }
 
 #contact input[type="submit"] {
-    background-color: #9B26B0;
-    color: white;
+    background-color: var(--Purple);
+    color: var(--White);
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    padding: 20px 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+footer {
+	background-color: var(--Light-gray);
+	height: 100px;
+	display: grid;
+	grid-template-rows: auto auto auto;
+	align-items: center;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px
+}
+
+footer p {
+	padding-bottom: 10px;
+}
+
+footer a {
+	padding-bottom: 10px;
+}
+footer p,
+footer a {
+    text-align: center;
+    font-weight: normal; /* Remove the bold style */
+    margin: 0;
+}
+
