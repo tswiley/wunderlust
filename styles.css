@@ -47,8 +47,6 @@ table {
 	border-spacing: 0;
 }
 
-@import url("https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat");
-
 :root {
 	--Yellow:#F6D64A;
 	--Teal:#55BCD5;
@@ -58,15 +56,121 @@ table {
 	--Light-gray:#EAEAEA;
 	--White:#FFFFFF;
 	--Black:#000000;
+	--font-molle: 'Molle', cursive;
+	--font-montserrat:'Montserrat', sans-serif ;
 	font-size: 16px;
-	font-family: Molle, Motserrat;
-	box-sizing: border-box;
+}
+
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+  }
+   
+#skip:focus{
+	position: static;
+	width: auto;
+	height: auto;
 }
 
 body {
-
+	display: grid;
+	grid-template-columns: ;
+	font-family: var(--font-montserrat);
+	line-height: 1.25;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 header {
+	background-color: white;
+	background: linear-gradient(to bottom, teal, white);
+	color: black;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding-top: 0.5rem;
+	padding-left: 2rem;
+	width: calc(100% - 2rem);
+	margin: auto;
+	align-items: center;
+}
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #F6D64A;
+	height: 40px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 2rem;
+	box-sizing: border-box;
+}
+
+#menu-toggle {
+    text-align: right;
+    padding: 10px 10px;
+	width: 200px;
+	display: flex;
+	align-items: center;
+}
+
+#toggle {
+    display: none;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+	width: 100%;
+	text-align: center;
+}
+
+label:focus + ul {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; 
+}
+
+li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+h1, h2, h3 {
+	font-family: var(--font-molle);
+}
+
+h4, p, q, small, nav, button, form {
+	font-family: var(--font-montserrat);
+}
+
+h1 {
+	font-size: 40px;
+}
+h2.sr-only {
+	display: none;
 }
