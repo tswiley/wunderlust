@@ -89,8 +89,7 @@ header {
     background: linear-gradient(to bottom, var(--Teal), var(--White));
     color: black;
     display: grid;
-    grid-template-columns: 1fr; 
-    grid-template-rows: auto auto auto auto; 
+    grid-template-columns: 1fr;
     align-items: center;
     padding: 1rem;
     width: 100%;
@@ -109,24 +108,14 @@ header {
 }
 
 nav {
-    grid-row: 1;
 	background-color: var(--Yellow);
     height: 40px;
     width: 200px;
-    display: flex;
-	justify-content: flex-end;
-	align-items: end;
     padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-}
-
-nav ul {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none;
 }
 
 nav li {
@@ -143,8 +132,20 @@ nav a {
 #toggle:checked + label + ul {
     display: flex;
     flex-direction: column;
+    background-color: var(--Teal);
+    color: var(--White);
+    align-items: center;
+    width: 200px;
 }
 
+#toggle:checked + label {
+    background-color: var(--Black);
+    color: var(--White);
+}
+
+#toggle:checked + label + ul {
+    
+}
 
 #menu-toggle {
     text-align: right;
@@ -195,10 +196,11 @@ a:hover {
 
 h1 {
     margin-top: 1rem;
+    margin-left: 1rem;
 }
 
-h1 + p {
-	grid-row: 4;
+header p {
+    margin-left: 1rem;
 }
 
 h1, h2, h3 {
@@ -212,13 +214,14 @@ h4, p, q, small, nav, button, form {
 h1 {
 	font-size: 40px;
 }
+
 h2.sr-only {
 	display: none;
 }
 
 h2 {
 	font-size: 40px;
-	padding-top: 60px;
+	
 }
 
 h2 p {
@@ -268,7 +271,6 @@ img {
 	gap: 0px;
 }
 
-
 #plan section {
 	border: 2px solid var(--White);
     background-color: var(--Teal); 
@@ -294,6 +296,7 @@ img {
 	margin: auto;
 	width: calc(100% - 3rem);
 	font-size: 30px;
+    padding-top: 20px;
 }
 
 #plan h4 {
@@ -325,6 +328,7 @@ img {
 	margin: auto;
 	width: calc(100% - 3rem);
 	font-size: 30px;
+    padding-top: 20px;
 }
 
 #testimonials div {
