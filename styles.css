@@ -77,37 +77,78 @@ table {
 }
 
 body {
-	font-family: var(--font-montserrat);
-	line-height: 1.75;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    font-family: var(--font-montserrat);
+    line-height: 1.75;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-	background-color: var(--White);
-	background: linear-gradient(to bottom, var(--Teal), var(--White));
-	color: black;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: ;
-	padding-top: 0.5rem;
-	padding-left: 2rem;
-	width: calc(100% - 2rem);
-	margin: auto;
-	align-items: center;
+    background-color: var(--White);
+    background: linear-gradient(to bottom, var(--Teal), var(--White));
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Single column layout for mobile */
+    grid-template-rows: auto auto auto auto; /* Three rows: menu, logo, content */
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#logo {
+    display: flex;
+    justify-content: left;
+    grid-row: 1;
+}
+
+#logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
 }
 
 nav {
-    background-color: var(--Yellow);
-	height: 40px;
-	width: 200px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 0 2rem;
-	box-sizing: border-box;
+    grid-row: 1; /* Row 1 */
+	background-color: var(--Yellow);
+    height: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+h1 + p {
+	grid-row: 4;
+}
+
+#toggle:checked + label + ul {
+    display: flex;
+    flex-direction: column;
+}
+
 
 #menu-toggle {
     text-align: right;
@@ -479,6 +520,7 @@ img {
     background-position: right 10px center;
 	padding: 10px 25px 10px 10px;
 	width: 100%;
+	
 }
 
 #contact select::-ms-expand {
